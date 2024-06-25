@@ -1,0 +1,41 @@
+.body {
+  display: block;
+  justify-content: center;
+  background: #eeeeee;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  & > *:not(:first-of-type) {
+    margin-top: 4px;
+  }
+  /*元件設間距*/
+}
+.actions {
+  & > *:not(:first-of-type) {
+    margin-top: 4px;
+  }
+}
+/*-------*/
+.gridcontainer {
+  width: min(calc(100vw));
+  height: min(calc(100vw));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/*-------*/
+
+.squareChess {
+  cursor: pointer;
+  border-radius: 12px;
+  /*background: ${(props)=>props.them.block.normal};*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

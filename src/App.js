@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import TicTacToe from "./TicTacToe";
+import themes from "./themes";
 
-function App() {
+const defaultTheme = Object.keys(themes)[0];
+
+const App = () => {
+  const [selectedTheme, setSelectedTheme] = useState(defaultTheme); //
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themes[selectedTheme]}>
+      <TicTacToe />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
+//-----------------------
+
+/*
+//測試icon是否可讀到值
+import React from "react";
+import CircleIcon from "./components/Icons/CircleIcon";
+import CrossIcon from "./components/Icons/CrossIcon";
+
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to the Chess Game</h1>
+      <div>
+        <h2>Circle Icon</h2>
+        <CircleIcon width={50} height={50} />
+      </div>
+      <div>
+        <h2>Cross Icon</h2>
+        <CrossIcon width={50} height={50} />
+      </div>
+    </div>
+  );
+};
+
+export default App;
+*/
