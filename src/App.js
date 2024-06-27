@@ -6,7 +6,7 @@ import themes from "./themes";
 const defaultTheme = Object.keys(themes)[0];
 
 const App = () => {
-  const [selectedTheme, setSelectedTheme] = useState(defaultTheme); //
+  const [selectedTheme] = useState(defaultTheme);
   return (
     <ThemeProvider theme={themes[selectedTheme]}>
       <TicTacToe />
