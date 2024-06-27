@@ -1,8 +1,8 @@
 {
-  "name": "202406_tictac",
+  "name": "11306_tictactoe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Lein6927.github.io/11306_TicTacToe",
+  "homepage": "https://lein6927.github.io/11306_TicTacToe",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
