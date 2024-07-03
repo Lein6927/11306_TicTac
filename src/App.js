@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import TicTacToe from "./TicTacToe";
 import themes from "./themes";
+import "./App.css"; // 確認這裡的路徑是正確的
 
 const defaultTheme = Object.keys(themes)[0];
 
