@@ -12,7 +12,6 @@ import { useState } from "react";
 //background: ${(props) => props.theme.background};
 const TicTacToeGame = styled.div`
   * {
-    border: 1px solid #000;
     padding: 4px;
   }
   display: flex;
